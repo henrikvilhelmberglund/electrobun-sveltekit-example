@@ -4,10 +4,10 @@
   "type": "module",
   "description": "Electrobun app with Svelte and Vite HMR",
   "scripts": {
-    "start": "./scripts/build-svelte.sh && electrobun dev --watch",
+    "start": "bun ./scripts/build-svelte.sh && electrobun dev --watch",
     "dev": "electrobun dev --watch",
     "dev:hmr": "concurrently \"bun run hmr\" \"bun run start\"",
-    "hmr": "./scripts/run-dev.sh",
+    "hmr": "bun ./scripts/run-dev.sh",
     "build:canary": "vite build && electrobun build --env=canary"
   },
   "dependencies": {
