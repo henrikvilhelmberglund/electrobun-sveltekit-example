@@ -1,10 +1,7 @@
-<script>
-	// @ts-nocheck
-
-	import { onMount } from 'svelte';
+<script lang="ts">
 	import { JsonView } from '@zerodevx/svelte-json-view';
 
-	let { data } = $props();
+	let { data }: { data: { title: string; data: { id: string; name: string; description: string }[] } } = $props();
 
 	$inspect('$props.data', data);
 </script>

@@ -9,6 +9,9 @@ const rpc = Electroview.defineRPC({
 const electrobun = new Electrobun.Electroview({ rpc });
 
 export async function load() {
+  if (!electrobun.rpc) {
+    return {};
+  }
 	let _data = await electrobun.rpc.request.loadData({});
 	return {
 		title: `Main View ${Date.now()}`,
